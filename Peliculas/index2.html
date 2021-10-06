@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Selector</title>
+    <style>
+
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body {
+            height: 700px;
+            width: 100vw;
+            background-image: url(https://wallpaperaccess.com/full/752715.jpg);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        body form {
+            align-items: center;
+            margin-top: 5rem;
+        }
+        .form-container {
+            height: 400px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-container form {
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container form input {
+            height: 50px;
+            width: 250px;
+            display: flex;
+            justify-content: center;
+        }
+        #data-container {
+            height: 400px;
+            width: 300px;
+        }
+         ul{
+            height: 50px;
+            width: 300px;
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            background: white;
+        }
+
+        li{
+            margin-top: .5rem;
+            height: 50px;
+            width: 300px;
+            list-style: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form onsubmit={MyForm(event)}>
+            <input type="text" placeholder="Escribe el nombre de la película" id="movie">
+            <input type="number" placeholder="Año de lanzamiento" id="lanzamiento">
+            <input class="submit" type="submit" value="Enviar">
+        </form>
+    </div>
+    <div id="data-container"></div>
+    <h2 id= "message"></h2>
+    <script src="main2.js"></script>    
+</body>
+</html>
